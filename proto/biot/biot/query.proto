@@ -23,6 +23,9 @@ service Query {
     option (google.api.http).get = "/Biot/biot/say_hello/{name}";
   
   }
+  rpc SayCosmos(QuerySayCosmosRequest) returns (QuerySayCosmosResponse) {
+    option (google.api.http).get = "/Biot/biot/say_cosmos/{name}";
+  }
 }
 // QueryParamsRequest is request type for the Query/Params RPC method.
 message QueryParamsRequest {}
@@ -39,6 +42,13 @@ message QuerySayHelloRequest {
 }
 
 message QuerySayHelloResponse {
+  string name = 1;
+}
+
+message QuerySayCosmosRequest{
+  string name = 1;
+}
+message QuerySayCosmosResponse{
   string name = 1;
 }
 
