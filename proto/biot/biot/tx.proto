@@ -1,0 +1,7 @@
+syntax = "proto3";
+package biot.biot;
+
+option go_package = "Biot/x/biot/types";
+
+// Msg defines the Msg service.
+service Msg {}

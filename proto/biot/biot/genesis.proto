@@ -1,0 +1,12 @@
+syntax = "proto3";
+package biot.biot;
+
+import "gogoproto/gogo.proto";
+import "biot/biot/params.proto";
+
+option go_package = "Biot/x/biot/types";
+
+// GenesisState defines the biot module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}

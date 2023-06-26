@@ -1,0 +1,12 @@
+syntax = "proto3";
+package biot.biot;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "Biot/x/biot/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (gogoproto.goproto_stringer) = false;
+  
+}
